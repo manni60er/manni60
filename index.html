@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Happy 60th Birthday Manfred!</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f9;
+      color: #333;
+      text-align: center;
+      padding: 50px;
+      overflow-x: hidden;
+      position: relative;
+    }
+    h1 {
+      color: #4444aa;
+      font-weight: bold;
+      animation: blink 1.5s infinite;
+      margin-bottom: 20px;
+    }
+    @keyframes blink {
+      0%, 50%, 100% { opacity: 1; }
+      25%, 75% { opacity: 0; }
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin-bottom: 20px;
+    }
+    li {
+      margin: 5px 0;
+      font-size: 1.2em;
+    }
+    .highlight {
+      color: #007700;
+      font-weight: bold;
+      font-size: 1.25em;
+    }
+    /* Confetti styles */
+    .confetti {
+      width: 10px;
+      height: 10px;
+      position: fixed;
+      background-color: red;
+      opacity: 0.8;
+      pointer-events: none;
+      animation-timing-function: ease-out;
+      z-index: 9999;
+      border-radius: 2px;
+      will-change: transform;
+    }
+  </style>
+</head>
+<body>
+  <h1>Happy 60th Birthday Manfred!</h1>
+  <p>Wishing you:</p>
+  <ul>
+    <li>Zero bugs</li>
+    <li>Clean code</li>
+    <li>Endless memory for all your happy moments!</li>
+  </ul>
+  <p class="highlight">
+    May your code always run without bugs,<br />
+    and your life be full of infinite loops of happiness!
+  </p>
+
+  <script>
+    // Confetti animation script
+    const colors = ['#f94144', '#f3722c', '#f9c74f', '#90be6d', '#43aa8b', '#577590'];
+    const confettiCount = 100;
+    const confettis = [];
+
+    function createConfetti() {
+      const confetti = document.createElement('div');
+      confetti.classList.add('confetti');
+      confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+      confetti.style.left = Math.random() * window.innerWidth + 'px';
+      confetti.style.top = '-10px';
+      confetti.style.opacity = Math.random();
+      confetti.speed = (Math.random() * 3) + 2;
+      confetti.style.transform = `rotate(${Math.random() * 360}deg)`;
+      document.body.appendChild(confetti);
+      return confetti;
+    }
+
+    function initConfetti() {
+      for (let i = 0; i < confettiCount; i++) {
+        confettis.push(createConfetti());
+      }
+      animateConfetti();
+    }
+
+    function animateConfetti() {
+      confettis.forEach(confetti => {
+        let top = parseFloat(confetti.style.top);
+        let left = parseFloat(confetti.style.left);
+        top += confetti.speed;
+        left += Math.sin(top / 10) * 2;
+        confetti.style.top = top + 'px';
+        confetti.style.left = left + 'px';
+        confetti.style.transform = `rotate(${top * 3}deg)`;
+        if (top > window.innerHeight) {
+          confetti.style.top = '-10px';
+          confetti.style.left = Math.random() * window.innerWidth + 'px';
+        }
+      });
+      requestAnimationFrame(animateConfetti);
+    }
+
+    window.onload = initConfetti;
+  </script>
+</body>
+</html>
