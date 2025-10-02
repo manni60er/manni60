@@ -2,113 +2,107 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Happy 60th Birthday Manfred!</title>
+  <title>Manfred's 60th Birthday Fanpage!!!</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background-color: #f4f4f9;
-      color: #333;
+      background: url("https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExaTY2Z2VlZHZ5dTVobmtyZmVzNGl4Z2Vtd2p6dmt1MzB6bG82OTMxcyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/1Tz1pbJTQQg12/giphy.gif") repeat;
+      color: #fff;
+      font-family: "Comic Sans MS", cursive, sans-serif;
       text-align: center;
-      padding: 50px;
-      overflow-x: hidden;
-      position: relative;
-    }
-    h1 {
-      color: #4444aa;
-      font-weight: bold;
-      animation: blink 1.5s infinite;
-      margin-bottom: 20px;
-    }
-    @keyframes blink {
-      0%, 50%, 100% { opacity: 1; }
-      25%, 75% { opacity: 0; }
-    }
-    ul {
-      list-style-type: none;
+      margin: 0;
       padding: 0;
-      margin-bottom: 20px;
     }
-    li {
-      margin: 5px 0;
+
+    h1 {
+      font-size: 3em;
+      color: #ff00ff;
+      text-shadow: 2px 2px #00ffff;
+      margin-top: 20px;
+      animation: glow 1.5s infinite alternate;
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 5px #fff, 0 0 10px #ff00ff; }
+      to { text-shadow: 0 0 15px #00ffff, 0 0 30px #ffff00; }
+    }
+
+    marquee {
+      background: #ff00ff;
+      color: yellow;
+      font-weight: bold;
+      padding: 5px;
+      margin: 10px 0;
+      border: 3px dashed lime;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: auto;
+      background: rgba(0, 0, 0, 0.7);
+      border: 5px ridge cyan;
+      padding: 20px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
       font-size: 1.2em;
     }
-    .highlight {
-      color: #007700;
-      font-weight: bold;
-      font-size: 1.25em;
+
+    li {
+      margin: 10px 0;
     }
-    /* Confetti styles */
-    .confetti {
-      width: 10px;
-      height: 10px;
-      position: fixed;
-      background-color: red;
-      opacity: 0.8;
-      pointer-events: none;
-      animation-timing-function: ease-out;
-      z-index: 9999;
-      border-radius: 2px;
-      will-change: transform;
+
+    .highlight {
+      background: #ff69b4;
+      color: black;
+      font-size: 1.3em;
+      font-weight: bold;
+      border: 3px dotted yellow;
+      margin-top: 20px;
+      padding: 10px;
+    }
+
+    footer {
+      margin-top: 30px;
+      font-size: 0.9em;
+    }
+
+    .gif {
+      margin: 10px;
     }
   </style>
 </head>
 <body>
-  <h1>Happy 60th Birthday Manfred!</h1>
-  <p>Wishing you:</p>
-  <ul>
-    <li>Zero bugs</li>
-    <li>Clean code</li>
-    <li>Endless memory for all your happy moments!</li>
-  </ul>
-  <p class="highlight">
-    May your code always run without bugs,<br />
-    and your life be full of infinite loops of happiness!
-  </p>
+  <h1>✨🎉 Happy 60th Birthday Manfred!!! 🎉✨</h1>
 
-  <script>
-    // Confetti animation script
-    const colors = ['#f94144', '#f3722c', '#f9c74f', '#90be6d', '#43aa8b', '#577590'];
-    const confettiCount = 100;
-    const confettis = [];
+  <marquee behavior="alternate" scrollamount="6">Welcome to Manfred's Birthday Fanpage! 🚀</marquee>
 
-    function createConfetti() {
-      const confetti = document.createElement('div');
-      confetti.classList.add('confetti');
-      confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
-      confetti.style.left = Math.random() * window.innerWidth + 'px';
-      confetti.style.top = '-10px';
-      confetti.style.opacity = Math.random();
-      confetti.speed = (Math.random() * 3) + 2;
-      confetti.style.transform = `rotate(${Math.random() * 360}deg)`;
-      document.body.appendChild(confetti);
-      return confetti;
-    }
+  <div class="container">
+    <p>We wish you:</p>
+    <ul>
+      <li>💻 Zero bugs</li>
+      <li>🧼 Clean code</li>
+      <li>🧠 Endless memory for happy moments!</li>
+    </ul>
 
-    function initConfetti() {
-      for (let i = 0; i < confettiCount; i++) {
-        confettis.push(createConfetti());
-      }
-      animateConfetti();
-    }
+    <div class="highlight">
+      May your code always run without bugs,<br />
+      and your life be full of infinite loops of happiness!
+    </div>
 
-    function animateConfetti() {
-      confettis.forEach(confetti => {
-        let top = parseFloat(confetti.style.top);
-        let left = parseFloat(confetti.style.left);
-        top += confetti.speed;
-        left += Math.sin(top / 10) * 2;
-        confetti.style.top = top + 'px';
-        confetti.style.left = left + 'px';
-        confetti.style.transform = `rotate(${top * 3}deg)`;
-        if (top > window.innerHeight) {
-          confetti.style.top = '-10px';
-          confetti.style.left = Math.random() * window.innerWidth + 'px';
-        }
-      });
-      requestAnimationFrame(animateConfetti);
-    }
+    <div class="gif">
+      <img src="https://www.animatedimages.org/data/media/563/animated-balloon-image-0039.gif" height="200" alt="Balloons" />
+      <img src="https://www.animatedimages.org/data/media/1243/animated-happy-birthday-image-0025.gif" height="200" alt="Fireworks" />
+      <img src="https://www.animatedimages.org/data/media/1414/animated-party-image-0019.gif" height="200" alt="Fireworks" />
+    </div>
+  </div>
 
-    window.onload = initConfetti;
-  </script>
+  <footer>
+    <p><img src="https://www.animatedimages.org/data/media/695/animated-under-construction-image-0053.gif" width="80" alt="Under Construction"> 
+         This page is always under construction since 2000   
+       <img src="https://www.animatedimages.org/data/media/695/animated-under-construction-image-0053.gif" width="80" alt="Under Construction"></p>
+    <p>Best viewed at 800x600 with Netscape Navigator 🚀</p>
+  </footer>
 </body>
 </html>
