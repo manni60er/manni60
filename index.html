@@ -1,194 +1,225 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Manfred's 60th Birthday Fanpage!!!</title>
-  
-  <!-- Comic Neue for consistent Comic Sans look -->
-  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    body {
-      background: url("https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExbGp4YnBxbHI4YnRqcDduNGVwY245enU2amFhcHB6dHhvZGZkODh3cSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/TxVVB6PfWMjE4/giphy.gif") repeat;
-      color: #fff;
-      font-family: 'Comic Neue', 'Comic Sans MS', cursive, sans-serif;
-      text-align: center;
-      margin: 0;
-      padding: 0;
-    }
+    <title>Manfred's 60th Birthday Page!!!</title>
 
-    h1 {
-      font-size: 3em;
-      color: #ff00ff;
-      text-shadow: 2px 2px #00ffff;
-      margin-top: 20px;
-      animation: glow 1.5s infinite alternate;
-    }
+    <!-- Comic Neue for consistent Comic Sans look -->
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap" rel="stylesheet">
 
-    @keyframes glow {
-      from { text-shadow: 0 0 5px #fff, 0 0 10px #ff00ff; }
-      to { text-shadow: 0 0 15px #00ffff, 0 0 30px #ffff00; }
-    }
+    <style>
+        body {
+            background: url("https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExbGp4YnBxbHI4YnRqcDduNGVwY245enU2amFhcHB6dHhvZGZkODh3cSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/TxVVB6PfWMjE4/giphy.gif") repeat;
+            color: #fff;
+            font-family: 'Comic Neue', 'Comic Sans MS', cursive, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
 
-    marquee {
-      background: #ff00ff;
-      color: yellow;
-      font-weight: bold;
-      padding: 5px;
-      margin: 30px 0;
-      border: 3px dashed lime;
-    }
+        h1 {
+            font-size: 3em;
+            color: #ff00ff;
+            text-shadow: 2px 2px #00ffff;
+            margin-top: 20px;
+            animation: glow 1.5s infinite alternate;
+        }
 
-    .container {
-      max-width: 800px;
-      margin: auto;
-      background: rgba(0, 0, 0, 0.6);
-      border: 15px ridge cyan;
-      padding: 20px;
-    }
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 5px #fff, 0 0 10px #ff00ff;
+            }
 
-    ul {
-      list-style: none;
-      padding: 0;
-      font-size: 1.2em;
-    }
+            to {
+                text-shadow: 0 0 15px #00ffff, 0 0 30px #ffff00;
+            }
+        }
 
-    li {
-      margin: 10px 0;
-    }
-    
-     p {
-      font-size: 1.3em;
-    }
+        marquee {
+            background: #ff00ff;
+            color: yellow;
+            font-weight: bold;
+            padding: 5px;
+            margin: 30px 0;
+            border: 3px dashed lime;
+        }
 
-    .highlight {
-      background: #ff69b4;
-      color: black;
-      font-size: 1.3em;
-      font-weight: bold;
-      border: 3px dotted yellow;
-      margin: 20px 0;
-      padding: 10px;
-    }
-    
-    .confetti {
-      width: 15px;
-      height: 15px;
-      position: fixed;
-      background-color: red;
-      opacity: 0.9;
-      pointer-events: none;
-      animation-timing-function: ease-out;
-      z-index: 9999;
-      border-radius: 1px;
-      will-change: transform;
-    }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: rgba(0, 0, 0, 0.6);
+            border: 15px ridge cyan;
+            padding: 20px;
+        }
 
-    footer {
-      margin-top: 30px;
-      font-size: 0.9em;
-    }
+        ul {
+            list-style: none;
+            padding: 0;
+            font-size: 1.2em;
+        }
 
-    .gif {
-      margin: 10px;
-    }
-  </style>
+        li {
+            margin: 10px 0;
+        }
+
+        p {
+            font-size: 1.3em;
+        }
+
+        .highlight {
+            background: #ff69b4;
+            color: black;
+            font-size: 1.3em;
+            font-weight: bold;
+            border: 3px dotted yellow;
+            margin: 20px 0;
+            padding: 10px;
+        }
+
+        .confetti {
+            width: 15px;
+            height: 15px;
+            position: fixed;
+            background-color: red;
+            opacity: 0.9;
+            pointer-events: none;
+            animation-timing-function: ease-out;
+            z-index: 9999;
+            border-radius: 1px;
+            will-change: transform;
+        }
+
+        footer {
+            margin-top: 30px;
+            font-size: 0.9em;
+        }
+
+        .gif {
+            margin: 10px;
+        }
+    </style>
 </head>
 <body>
 
-<script>
-    // Confetti animation script
-    const colors = ['#f94144', '#f3722c', '#f9c74f', '#90be6d', '#43aa8b', '#577590'];
-    const confettiCount = 100;
-    const confettis = [];
+    <script>
+        // Confetti script
+        const colors = [
+            '#ff0000', // knallrot
+            '#ff00ff', // magenta
+            '#00ffff', // cyan
+            '#00ff00', // neon-grün
+            '#ffff00', // gelb
+            '#ff6600', // orange
+            '#ff3399', // pink
+            '#33ccff', // himmelblau
+            '#66ff33', // giftgrün
+            '#ff33cc', // rosa
+            '#ffffff'  // weiß für Glanzeffekt
+        ];
 
-    function createConfetti() {
-      const confetti = document.createElement('div');
-      confetti.classList.add('confetti');
-      confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
-      confetti.style.left = Math.random() * window.innerWidth + 'px';
-      confetti.style.top = '-10px';
-      confetti.style.opacity = Math.random();
-      confetti.speed = (Math.random() * 3) + 2;
-      confetti.style.transform = `rotate(${Math.random() * 360}deg)`;
-      document.body.appendChild(confetti);
-      return confetti;
-    }
+        const confettiCount = 100;
+        const confettis = [];
 
-    function initConfetti() {
-      for (let i = 0; i < confettiCount; i++) {
-        confettis.push(createConfetti());
-      }
-      animateConfetti();
-    }
+        function createConfetti() {
+            const confetti = document.createElement('div');
+            confetti.classList.add('confetti');
 
-    function animateConfetti() {
-      confettis.forEach(confetti => {
-        let top = parseFloat(confetti.style.top);
-        let left = parseFloat(confetti.style.left);
-        top += confetti.speed;
-        left += Math.sin(top / 10) * 2;
-        confetti.style.top = top + 'px';
-        confetti.style.left = left + 'px';
-        confetti.style.transform = `rotate(${top * 3}deg)`;
-        if (top > window.innerHeight) {
-          confetti.style.top = '-10px';
-          confetti.style.left = Math.random() * window.innerWidth + 'px';
+            const color = colors[Math.floor(Math.random() * colors.length)];
+            confetti.style.backgroundColor = color;
+            confetti.style.left = Math.random() * window.innerWidth + 'px';
+            confetti.style.top = '-10px';
+            confetti.style.opacity = [0.6, 0.8, 1][Math.floor(Math.random() * 3)];
+            confetti.speed = (Math.random() * 3) + 2;
+            confetti.style.transform = `rotate(${Math.random() * 360}deg)`;
+
+            // Neon Glow Effekt
+            confetti.style.boxShadow = `0 0 ${Math.random() * 10 + 5}px ${color}`;
+
+            document.body.appendChild(confetti);
+            return confetti;
         }
-      });
-      requestAnimationFrame(animateConfetti);
-    }
 
-    window.onload = initConfetti;
-  </script>
+        function initConfetti() {
+            for (let i = 0; i < confettiCount; i++) {
+                confettis.push(createConfetti());
+            }
+            animateConfetti();
+        }
 
-  <h1>✨🎉 Happy 60th Birthday Manfred!!! 🎉✨</h1>
+        function animateConfetti() {
+            confettis.forEach(confetti => {
+                let top = parseFloat(confetti.style.top);
+                let left = parseFloat(confetti.style.left);
+                top += confetti.speed;
+                left += Math.sin(top / 10) * 2;
+                confetti.style.top = top + 'px';
+                confetti.style.left = left + 'px';
+                confetti.style.transform = `rotate(${top * 3}deg)`;
+                if (top > window.innerHeight) {
+                    confetti.style.top = '-10px';
+                    confetti.style.left = Math.random() * window.innerWidth + 'px';
+                }
+            });
+            requestAnimationFrame(animateConfetti);
+        }
 
-  <marquee behavior="alternate" scrollamount="6">Welcome to Manfred's Birthday Fanpage! 🚀</marquee>
-
-  <div class="container">
-    <p>We wish you:</p>
-    <ul>
-      <li>💻 Zero bugs</li>
-      <li>🧼 Clean code</li>
-      <li>🧠 Endless memory for happy moments!</li>
-    </ul>
-
-    <div class="highlight">
-      May your code always run without bugs,<br />
-      and your life be full of infinite loops of happiness!
-    </div>
-
-    <div class="gif">
-      <img src="https://www.animatedimages.org/data/media/563/animated-balloon-image-0039.gif" height="200" alt="Balloons" />
-      <img src="https://www.animatedimages.org/data/media/1243/animated-happy-birthday-image-0025.gif" height="200" alt="Fireworks" />
-      <img src="https://www.animatedimages.org/data/media/1414/animated-party-image-0019.gif" height="200" alt="Fireworks" />
-    </div>
-  </div>
+        window.onload = initConfetti;
+    </script>
 
    
-  <footer>
-    <p><img src="https://www.animatedimages.org/data/media/695/animated-under-construction-image-0053.gif" width="80" alt="Under Construction"> 
-         This page is always under construction since 2000   
-       <img src="https://www.animatedimages.org/data/media/695/animated-under-construction-image-0053.gif" width="80" alt="Under Construction"></p>
-    <p>Best viewed at 800x600 with Netscape Navigator 🚀</p>
-    
-    <p style="text-align:center;">
-  <img src="https://www.animatedimages.org/data/media/1644/animated-winner-smiley-image-0006.gif" alt="Cool Site Award" style="vertical-align:middle;">
-  <span style="display:inline-block; vertical-align:middle; margin-left:10px;">
-    Cool Website Award
-  </span>
-</p>
-    
-    <p>Visitor count: 
-      <span style="font-family:'Courier Prime', 'Courier New', Courier, monospace; background:black; color:lime; padding:2px 6px;"> 000531 </span>
 
-    </p>
-    
-  </footer>
-  
-  
-  
+    <h1>✨🎉 Happy 60th Birthday Manfred!!! 🎉✨</h1>
+
+    <marquee height="25" behavior="alternate" scrollamount="10">🚀 Welcome to Manfred's Birthday Page! 🚀</marquee>
+
+    <div class="container">
+        <p>We wish you:</p>
+        <ul>
+            <li>💻 Zero bugs</li>
+            <li>🧼 Clean code</li>
+            <li>🧠 Endless memory for happy moments!</li>
+        </ul>
+
+        <div class="highlight">
+            May your code always run without bugs,<br />
+            and your life be full of infinite loops of happiness!
+        </div>
+
+        <div class="gif">
+            <img src="https://www.animatedimages.org/data/media/563/animated-balloon-image-0039.gif" height="200" alt="Balloons" />
+            <img src="https://www.animatedimages.org/data/media/1243/animated-happy-birthday-image-0025.gif" height="200" alt="Fireworks" />
+            <img src="https://www.animatedimages.org/data/media/1414/animated-party-image-0019.gif" height="200" alt="Fireworks" />
+        </div>
+    </div>
+
+
+    <footer>
+        <p>
+            <img src="https://www.animatedimages.org/data/media/695/animated-under-construction-image-0053.gif" width="80" alt="Under Construction">
+            This page is always under construction since 1965
+            <img src="https://www.animatedimages.org/data/media/695/animated-under-construction-image-0053.gif" width="80" alt="Under Construction">
+        </p>
+        <p>Best viewed at 800x600 with Netscape Navigator 🚀</p>
+
+        <p style="text-align:center;">
+            <img src="https://www.animatedimages.org/data/media/1644/animated-winner-smiley-image-0006.gif" alt="Cool Site Award" style="vertical-align:middle;">
+            <span style="display:inline-block; vertical-align:middle; margin-left:10px;">
+                Cool Website Award
+            </span>
+        </p>
+
+        <p>
+            Visitor count:
+            <span style="font-family:'Courier Prime', 'Courier New', Courier, monospace; background:black; color:lime; padding:2px 6px;"> 000534 </span>
+
+        </p>
+
+    </footer>
+
+
+
 </body>
 </html>
