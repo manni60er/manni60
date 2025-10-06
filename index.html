@@ -21,16 +21,20 @@
 
     h1 {
       font-size: 3em;
-      color: #ff00ff;
-      text-shadow: 2px 2px #00ffff;
       margin-top: 20px;
-      animation: glow 1.5s infinite alternate;
+      animation: glow 1.0s infinite alternate;
     }
 
     @keyframes glow {
-      from { text-shadow: 0 0 5px #fff, 0 0 10px #ff00ff; }
-      to { text-shadow: 0 0 15px #00ffff, 0 0 30px #ffff00; }
+      from { text-shadow: 0 0 0px #ffffff, 0 0 5px #ffffff; }
+      to { text-shadow: 0 0 15px #ffffff, 0 0 30px #ffffff; }
     }
+
+      .h1_text {
+          font-size: 0.8em;
+          margin-left: -5px;
+          margin-right: -5px;
+      }
 
     marquee {
       background: #ff00ff;
@@ -95,11 +99,7 @@
       margin: 10px;
     }
 
-      .h1_text {
-          font-size: 1em;
-          margin-left: -5px;
-          margin-right: -5px;
-      }
+      
 
   </style>
 </head>
