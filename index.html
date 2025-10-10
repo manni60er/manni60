@@ -254,8 +254,14 @@
             font-size: 11px;
             color: #000;
             -webkit-font-smoothing: none;
-            -moz-osx-font-smoothing: grayscale;
-            font-smooth: never;
+            -webkit-font-smoothing: none; /* Chrome, Safari */
+            -moz-osx-font-smoothing: unset; /* Firefox auf macOS */
+            text-rendering: optimizeSpeed; /* Alle Browser */
+
+            image-rendering: -moz-crisp-edges;
+            image-rendering: pixelated;
+            -ms-interpolation-mode: nearest-neighbor;
+
         }
 
         .win95-desktop {
@@ -266,7 +272,7 @@
         /* Fenster mit präzisen 3D-Rahmen */
         .win95-window {
             position: relative;
-            width: 380px;
+            width: 400px;
             background: var(--win95-face);
             border-left: 3px solid var(--win95-hilight);
             border-top: 3px solid var(--win95-hilight);
@@ -389,22 +395,15 @@
         .icon-cell {
             width: 40px;
             vertical-align: top;
-            padding-right: 12px;
-        }
-
-        .msg-icon {
-            width: 32px;
-            height: 32px;
-            font-size: 32px;
-            line-height: 32px;
-            text-align: center;
-        }
+            padding-left: 18px;
+         }
 
         .text-cell {
             vertical-align: top;
-            padding-top: 6px;
-            font-size: 11px;
-            line-height: 13px;
+            padding-top: 10px;
+            font-size: 13px;
+            line-height: 14px;
+       
         }
 
         /* Button-Bereich */
@@ -517,7 +516,7 @@
                 <table cellpadding="0" cellspacing="0" border="0" style="width:100%">
                     <tr>
                         <td class="icon-cell">
-                            <div class="msg-icon">❔</div>
+                            <img alt="question_icon" src="data:image/x-icon;base64,AAABAAMAICAQAAEABADoAgAANgAAACAgAgABAAEAMAEAAB4DAAAQEBAAAQAEACgBAABOBAAAKAAAACAAAABAAAAAAQAEAAAAAACAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAIAAAACAgACAAAAAgACAAICAAADAwMAAgICAAAAA/wAA/wAAAP//AP8AAAD/AP8A//8AAP///wAAAAAAAAAAAAAIgAAAAAAAAAAAAAAAAAAAiIAAAAAAAAAAAAAAAAAAAAiAAAAAAAAAAAAAAAAAAA8IgAAAAAAAAAAAAAAAAAD/CIAAAAAAAAAAAAAAAAgP/wiAAAAAAAAAAAAAAIiID/8IiIgAAAAAAAAAAIiAAH//CIiIiAAAAAAAAAgAB////3AAiIiAAAAAAAAAf///////9wCIiAAAAAAAf//////////3CIiAAAAAD/////////////CIiAAAAP/////3zH//////CIiAAI///////MzP//////CIgAh///////zMz//////3CIgI///////3zH///////wiIh/////////////////9wiI/////////M////////8IiP////////zH////////CIj////////8zP///////wiI////////98zP//////8IiP/////3zH/MzP//////CAh//////MzPfMzP////9wgAj/////zMz/zMz/////CAAIf////8z//8zM////9wAAAI////98f/zMx/////AAAAAI////98zMzH////8AAAAAAI/////////////wAAAAAAAIf//////////3gAAAAAAAAIh////////3iAAAAAAAAAAAiIf///94iAAAAAAAAAAAAAAIiIiIgAAAAAAAAP//5////8f///+H////B////gf///gH///AAP//AAA//gAAH/wAAA/4AAAH8AAAA+AAAAHAAAABgAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAABgAAAA4AAAAfAAAAP4AAAH/AAAD/4AAB//AAA//8AA///4B//KAAAACAAAABAAAAAAQABAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8AAAAAAAAAAAAAAAAAAABAAAAAwAAAAcAAAAHAAAABwAAAD8AAAH/4AAH//gAH//+AD/z/wB/4f+Af+H/gP/z/8D////B//P/4f/z/+H/8f/h//j/4f+Yf+D/DD/A/ww/wH88P4B/uH+AP8D/AB///gAH//gAAf/gAAA/AAAAAAAD/////////////n////x////4f///8H////B///+Af//8AA//8AAD/+AAAf/AAAD/gAAAfwAAAD4AAAAeAAAAHAAAAAwAAAAMAAAADAAAAAwAAAAMAAAADAAAAA4AAAAeAAAAHwAAAD+AAAB/wAAA/+AAAf/wAAP//AAP//+Af/ygAAAAQAAAAIAAAAAEABAAAAAAAwAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAACAAACAAAAAgIAAgAAAAIAAgACAgAAAwMDAAICAgAAAAP8AAP8AAAD//wD/AAAA/wD/AP//AAD///8AAAAAAAiAAAAAAAAAAIAAAAAAAADwgAAAAAAAB/CIAAAAAAf/9wCIAAAH//f/9wiACP//fH//cICH///3///3CI////z///8Ij////M///wiP///3zP//CI///M/M//cACP/3zMf/8IAI//98f/9wAACI////8AAAAACIiIiAAAD/nwAA/x8AAP4fAAD4DwAA4AMAAMABAACAAQAAAAAAAAAAAAAAAAAAAAAAAAABAACAAQAAgAMAAMAHAADwHwAA" />
                         </td>
                         <td class="text-cell" id="dialog-text">
                             Wollen Sie diese Webseite betreten?
